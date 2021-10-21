@@ -1,0 +1,116 @@
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+
+}
+
+.books-list{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+
+.book-container{
+    margin: 1.5rem;
+    border-radius: 0.7rem;
+    background-image: linear-gradient(to right top, #35dc3d, #50bf2c, #59a220, #59871a, #536d18);
+    height: 25rem;
+    border-left: 20px solid rgb(129, 7, 7);
+    color: #9A1111;
+    width: 20rem;
+    box-shadow: 2px 3px 21px 0px rgba(0,0,0,0.75);
+
+
+}
+
+.book-container h1,.book-container h3{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(145, 9, 36);
+    text-align: center;
+    transition: all 1s;
+    transform: translateY(130px);
+    
+    
+}
+.book-container h3{
+    font-family: 'Pacifico', cursive;
+    color: rgb(119, 57, 13);
+}
+.book-container:hover{
+    background-image: linear-gradient(to right top, #6bd1a0, #5cc88c, #4fbf77, #44b661, #3bac49, #35aa50, #2fa857, #2aa65d, #39aa7c, #55ac94, #76ada4, #98acab);
+    box-shadow: 12px 13px 21px -5px rgb(245 59 59);
+    transform: scale(1.04);
+    transition:all 0.7s;
+    border-left: 1.5rem solid rgb(129, 7, 7);
+}
+
+.book-container h1{
+    font-size:1.9rem;
+    text-decoration: underline;
+}
+.book-container h3{
+    font-size:1.3rem;
+}
+
+.book-container p,.book-container h4 {
+    margin: 1rem;
+}
+
+
+
+.book-container h1:hover{
+    color:pink;
+}
+.book-container:hover h1,.book-container:hover h3{
+    transform: translate(0);
+   
+   
+}
+.book-container:hover h1{
+    font-size: 1.6rem;
+    text-decoration: none;
+    
+}
+.book-container:hover h3{
+    font-size: 1rem;
+}
+.book-details{
+    font-family: 'Roboto', sans-serif;
+    position:relative;
+    top:3rem;
+    opacity:0;
+    transform: translateX(50px);
+    transition:all 1s;
+}
+
+.button-chara{
+    margin: 0;
+    color:lightgoldenrodyellow;
+    position: relative;
+    left: 5rem;
+    background-color: #4c2d2d;
+    width: 10rem;
+    height: 3rem;
+    border-radius:1rem;
+}
+
+.chara-list{
+    text-decoration: underline;
+    display:none;
+    transition:all 1s;
+    font-family: 'Lobster', cursive;
+    
+}
+
+
+.book-container:hover .book-details{
+    transform: translate(0);
+    opacity:1;
+}
+
+.div-list{
+    margin:1rem;
+}
+.date-update{
+    margin:1rem;
+}
