@@ -9,7 +9,7 @@ async function getbooks() {
     // BOOKS GETS ALL THE DETAILS FROM DATA BY CONVERTING INTO JSON //
     
     const books = await data.json();
-    console.log(books);
+    
     const bookcontainer = document.querySelector(".books-list");
     let i = 0;
     books.forEach((book) => {
@@ -33,7 +33,7 @@ async function getbooks() {
             </div>
         </div>
             `;
-        console.log(`${book.characters[0]}`);
+        
 
         
         // UPDATING THE TIME ON THE WEBSITE NOT THE API
@@ -56,12 +56,12 @@ async function geteach(bookchara) {
 }
 
 async function getchara(bookchara, i) {
-    console.log(bookchara);
+    
 
     // USING PROMISE.ALL TO GET EACH CHARACTERS API NAME INTO THE BOOK DETAILS // 
 
     const data2 = await Promise.all([geteach(bookchara.characters[0]), geteach(bookchara.characters[1]), geteach(bookchara.characters[2]), geteach(bookchara.characters[3]), geteach(bookchara.characters[4]), geteach(bookchara.characters[5]), geteach(bookchara.characters[6]), geteach(bookchara.characters[7]), geteach(bookchara.characters[8]), geteach(bookchara.characters[9]), geteach(bookchara.characters[10]), geteach(bookchara.characters[11])]);
-    console.log(data2);
+   
     data2.forEach(data => {
         const characontainer = document.querySelector(`.chara-list-${i}`);
         characontainer.innerHTML += `
@@ -81,7 +81,7 @@ function togglechara(i) {
     // TOGGLING CHARACTER BUTTON MAKING DISPLAY TOGGLE BETWEEN BLOCK AND NONE AND CHANGING HEIGHT OF BOOK CONTAINER
 
     const charabut = document.querySelector(`.chara-list-${i}`);
-    console.log(charabut.style.display);
+    
     charabut.style.display = charabut.style.display === "block" ? "none" : "block";
     const bookcont = document.querySelector(`.book-container-${i}`);
     bookcont.style.height = bookcont.style.height === "52rem" ? "25rem" : "52rem";
@@ -91,7 +91,7 @@ function togglechara(i) {
 
 // TO PRINT ONLY THE DATE AND NOT THE TIME AS IT WAS UNNNECESSARY ///
 function bookdate(date, i){
-    console.log(date,i);
+    
     const datename = document.querySelector(`.book-date-${i}`);
     datename.innerHTML = `<span class="date-update"><b> Date Published:-</b></span>`
     for(let j=0;j<(10);j++){
